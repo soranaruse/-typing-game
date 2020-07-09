@@ -406,7 +406,7 @@ let score;
 let miss;
 
 // タイムリミットを設定する
-const timeLimit = 3 * 1000;
+const timeLimit = 30 * 1000;
 
 let startTime;
 let isPlaying = false;
