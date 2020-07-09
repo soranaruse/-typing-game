@@ -406,7 +406,7 @@ let score;
 let miss;
 
 // タイムリミットを設定する
-const timeLimit = 30 * 1000;
+const timeLimit = 3 * 1000;
 
 let startTime;
 let isPlaying = false;
@@ -422,9 +422,18 @@ const modalWrapper = document.getElementById('modalWrapper');
 
 // 戻るボタン
 document.getElementById('btn').addEventListener('click', () => {
+  // スコア画面を非表示
   modalWrapper.style.display = 'none'
 
-  isPlaying === false;
+  // アイドリング用に初期値リセット
+  score = 0;
+  miss = 0;
+
+  scoreLabel.textContent = score;
+  missLabel.textContent = miss;
+
+  isPlaying = false;
+  
 });
 
 // タイピングされた文字が合っていれば _ で伏せる
@@ -474,13 +483,15 @@ function showResult() {
   // 正解率を計算
   const accuracy = score + miss === 0 ? 0 : score / (score + miss) * 100;
   
+  // スコア画面を表示
   modalWrapper.style.display = 'block'
 
+  // スコアを出力
   scoreDisplay.textContent = `${score} Types`
   missDisplay.textContent = `${miss} Misses`
   accuracyDisplay.textContent = `${accuracy.toFixed(0)}% ACU!`
 
-  isPlaying = true;
+  isPlaying = true;  
 
 }
 
