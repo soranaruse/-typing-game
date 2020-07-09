@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: grenadine-mvb, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#target {
+  font-size: 78px;
+  letter-spacing: 3px;
+  color: #4f4f4f;
+}
+
+.info {
+  font-size: 28px;
+  color: #ccc;
+}
+
+main {
+  position: relative;
+  align-self: center;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.under {
+  vertical-align: bottom;
+}
+
+#score {
+  color: #0099ff;
+}
+
+#miss {
+  color: #ffd700;
+}
+
+＃timer {
+  color: #ccc;
+}
+
+#modalWrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+
+#btn {
+  display: inline-block;
+  padding: 14px 80px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50px;
+  color: #f66;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.modal {
+  background: #f66;
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+  width: 500px;
+  height: 500px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+}
+
+.modalContent {
+  padding-top: -10px;
+}
+
+.modalContent h2 {
+  font-size: 64px;
+  letter-spacing: 3px;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.modalContent p {
+  color: #fff;
+  font-size: 28px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.container {
+  margin-left: 26px;
+  margin-bottom: 20px;
+}
